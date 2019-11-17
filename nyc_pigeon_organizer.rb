@@ -42,11 +42,11 @@ def stringify(array)
 end
 
 
-def new_hash(names, instances, traits)
-  new = {}
-  i = 0
-  while i < names.size                                   #  <--  names_final_array
-    while ii < instances.size
+def new_hash(pigeons, traits, data)
+  hash = {}
+  pigeons.size.times { |name|                            #  <--  names_final_array
+    data.size.times { |attribute|
+    
     new[names[i]] = {color: [], gender: [], lives: []}
     new[names[i]][:color] << traits[i][ii]
     new[names[i]][:gender] << traits[i][ii]
