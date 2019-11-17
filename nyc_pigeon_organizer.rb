@@ -7,7 +7,6 @@ def remove_key_hash_of_hoa(hash)
   new
 end
 
-
 def remove_key_array_of_hoa(array)
   new = []
   i = 0
@@ -21,13 +20,11 @@ def remove_key_array_of_hoa(array)
   new
 end
 
-
 def simplify_aoa(array)
   new1 = array.flatten                                   #  <--  names_aoa
   new2 = new1.uniq
   new2                                                   #  -->  names_final_array
 end
-
 
 def stringify(array)
   new = []
@@ -41,7 +38,6 @@ def stringify(array)
   new
 end
 
-
 def isolate_key_hash_of_hoa(hash)
   new = []
   hash.each {|key, value|                                #  <--  pigeon_data
@@ -49,7 +45,6 @@ def isolate_key_hash_of_hoa(hash)
   }                                                      #  -->  remove_first_key
   new
 end
-
 
 def new_hash(data, pigeons, attributes, traits)
   hash = {}
@@ -66,7 +61,6 @@ def new_hash(data, pigeons, attributes, traits)
   end
   hash
 end
-
 
 def nyc_pigeon_organizer(data)
   remove_first_key = remove_key_hash_of_hoa(data)
