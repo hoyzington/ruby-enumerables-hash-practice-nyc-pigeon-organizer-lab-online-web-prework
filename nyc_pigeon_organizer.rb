@@ -54,7 +54,7 @@ end
 def new_hash(data, pigeons, attributes, traits)
   hash = {}
   pigeons.size.times do |name|
-    hash[pigeons[name]] = {}                             #  <--  names_final_array
+    hash[pigeons[name]] = {}                             #  <--  (multiple!)
     data.size.times do |attribute|
       hash[pigeons[name]][attributes[attribute]] = []
       data[attribute].size.times do |trait|
@@ -74,6 +74,6 @@ def nyc_pigeon_organizer(data)
   names_final_array = simplify_aoa(names_aoa)
   string_keys = stringify(remove_first_key)
   array_of_keys = isolate_key_hash_of_hoa(data)
-  pigeon_list = new_hash(names_final_array)
+  pigeon_list = new_hash(names_aoa, names_final_array, array_of_keys, string_keys)
   pigeon_list
 end
