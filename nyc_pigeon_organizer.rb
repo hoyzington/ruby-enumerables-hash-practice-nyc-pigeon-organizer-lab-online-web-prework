@@ -59,7 +59,7 @@ def new_hash(data, pigeons, attributes, traits)
       hash[pigeons[name]][attributes[attribute]] = []
       data[attribute].size.times do |trait|
         if data[attribute][trait].include?(pigeons[name]) == true
-          hash[pigeons[name]][attributes[attribute]] << traits[attribute]
+          hash[pigeons[name]][attributes[attribute]] << traits[attribute][trait]
         end
       end                                                #  -->  pigeon_list
     end
