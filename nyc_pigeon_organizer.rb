@@ -42,6 +42,8 @@ def stringify(array)
 end
 
 
+
+
 def new_hash(pigeons, traits, data)
   hash = {}
   pigeons.size.times do |name|                            #  <--  names_final_array
