@@ -42,6 +42,13 @@ def stringify(array)
 end
 
 
+def isolate_key_hash_of_hoa(hash)
+  new = []
+  hash.each {|key, value|                                #  <--  pigeon_data
+    new << key
+  }                                                      #  -->  remove_first_key
+  new
+end
 
 
 def new_hash(pigeons, traits, data)
