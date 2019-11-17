@@ -73,6 +73,7 @@ def nyc_pigeon_organizer(data)
   names_aoa = remove_key_array_of_hoa(remove_first_key)
   names_final_array = simplify_aoa(names_aoa)
   string_keys = stringify(remove_first_key)
+  isolated_keys = 
   pigeon_list = new_hash(names_final_array)
   pigeon_list
 end
