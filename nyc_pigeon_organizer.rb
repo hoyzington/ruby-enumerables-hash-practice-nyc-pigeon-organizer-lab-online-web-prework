@@ -51,17 +51,17 @@ def isolate_key_hash_of_hoa(hash)
 end
 
 
-def new_hash(pigeons, traits, data)
+def new_hash(data, pigeons, attributes, traits)
   hash = {}
   pigeons.size.times do |name|
-    hash[pigeons[name]] = {}                              #  <--  names_final_array
+    hash[pigeons[name]] = {}                             #  <--  names_final_array
     data.size.times do |attribute|
       hash[pigeons[name]][attributes[attribute]] = []
       data[attribute].size.times do |trait|
         if data[attribute][trait].include?(pigeons[name]) == true
           hash[pigeons[name]][attributes[attribute]] << traits[attribute]
         end
-      end                                             #  -->  pigeon_list
+      end                                                #  -->  pigeon_list
     end
   end
   hash
